@@ -1,0 +1,394 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.none {
+    display: none;
+}
+
+.active-link {
+    color: rgb(225, 135, 85);
+}
+
+.loader,
+.app {
+    width: 100vw;
+    height: 100vh;
+}
+
+.spinner-border {
+    border-right: transparent;
+    border-left-color: rgb(225, 135, 85);
+    border-bottom-color: rgb(225, 135, 85);
+    border-top: transparent;
+}
+
+.app {
+    background-color: rgba(226, 223, 223, 0.837);
+}
+
+.side-nav {
+    height: calc(100vh - 60px);
+    width: 250px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 30px 0px 15px 30px;
+    padding-top: 20px;
+    box-sizing: border-box;
+    animation: moveside 1s linear 0s;
+}
+
+@keyframes moveside {
+    0% {
+        transform: translateX(-200px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.full {
+    width: 100%;
+    height: 100%;
+}
+
+.home-container {
+    overflow-y: scroll;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.intro {
+    height: 300px;
+    position: relative;
+}
+
+.intro-img img {
+    height: 500px;
+    position: absolute;
+    right: 14%;
+    top: 0;
+}
+
+.features {
+    background-color: white;
+    position: relative;
+    z-index: 1;
+    padding: 20px 30px;
+}
+
+.projects,
+.create-task,
+.contact {
+    height: calc(100vh - 60px);
+    width: 100%;
+    margin: 30px 20px 15px 30px;
+    overflow: hidden;
+}
+
+.home-nav,
+.intro {
+    margin: 0px 20px 0px 30px;
+}
+
+.home {
+    height: calc(100vh - 60px);
+    width: 100%;
+    margin: 30px 0px 15px 0px;
+    overflow: hidden;
+}
+
+.side-nav-links {
+    margin-top: 20px;
+}
+
+.side-nav-links button {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border: none;
+    background-color: white;
+}
+
+.intro h2 {
+    color: rgb(85, 84, 84);
+}
+
+.side-nav-links button i {
+    padding-right: 10px;
+}
+
+.side-nav-links button:hover {
+    background-color: rgb(147, 147, 196);
+    border-right: 2px solid rgb(225, 135, 85);
+    color: rgb(225, 135, 85);
+    background-color: #FFF5F0;
+}
+
+.search {
+    height: 50px;
+    background-color: white;
+    border-radius: 10px;
+    animation: movedown 1s ease 0s forwards;
+    visibility: hidden;
+}
+
+@keyframes movedown {
+    0% {
+        transform: translateY(-100px);
+        visibility: visible;
+    }
+    100% {
+        transform: translateY(0);
+        visibility: visible;
+    }
+}
+
+.search input {
+    height: 30px;
+    margin: 10px 0px;
+    width: 200px;
+    border: none;
+    padding-left: 10px;
+    background-color: #F7F5F4;
+    border-radius: 15px;
+    outline: none;
+}
+
+.search-icon {
+    cursor: pointer;
+}
+
+.add-btn {
+    margin-left: auto;
+    background-color: #FA7C3C;
+    color: white;
+    cursor: pointer;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.toggler {
+    cursor: pointer;
+    color: rgb(225, 135, 85);
+    background-color: #FFF5F0;
+    padding: 5px;
+    border: 2px solid rgb(225, 135, 85);
+    border-radius: 5px;
+}
+
+.cancel {
+    position: absolute;
+    z-index: -1;
+}
+
+.elapsed,
+.ongoing,
+.completed {
+    height: calc(100vh - 162px);
+    overflow-y: scroll;
+    position: relative;
+}
+
+.completed::-webkit-scrollbar {
+    display: none;
+}
+
+.ongoing::-webkit-scrollbar {
+    display: none;
+}
+
+.elapsed::-webkit-scrollbar {
+    display: none;
+}
+
+.searched-task {
+    height: calc(100vh - 162px);
+    overflow-y: scroll;
+    padding-bottom: 20px;
+}
+
+.searched-task::-webkit-scrollbar {
+    display: none;
+}
+
+.all-tasks {
+    height: 100vh;
+    width: 100%;
+}
+
+.bd-red,
+.bd-green,
+.bd-blue {
+    min-height: 50px;
+}
+
+.bd-red {
+    border: 1px solid black;
+    box-shadow: 5px 10px 5px #888888;
+}
+
+.bd-blue {
+    border: 1px solid black;
+    box-shadow: 5px 7px 5px #888888;
+}
+
+.bd-green {
+    border: 1px solid green;
+}
+
+.bg-no-task {
+    background-color: white;
+    width: 300px;
+    word-spacing: 5px;
+    text-align: center;
+    height: 100px;
+    border-radius: 15px;
+}
+
+
+/* Hide scrollbar for IE, Edge and Firefox */
+
+
+/* .all-tasks { */
+
+
+/* -ms-overflow-style: none; */
+
+
+/* IE and Edge */
+
+
+/* scrollbar-width: none; */
+
+
+/* Firefox */
+
+
+/* } */
+
+.create-task p {
+    font-weight: bold;
+}
+
+.create-task form {
+    margin: 20px 100px;
+}
+
+#add-task {
+    margin: 20px 112px;
+}
+
+.white {
+    color: white;
+}
+
+.orange {
+    color: #FA7C3C;
+}
+
+.navbar-brand {
+    color: white;
+    font-weight: bold;
+}
+
+.navbar-brand:hover {
+    color: white;
+}
+
+
+/* .home::-webkit-scrollbar {
+    display: none;
+} */
+
+@media screen and (max-width: 767px) {
+    .side-nav {
+        height: 100vh;
+        width: 200px;
+        border-radius: 0px;
+        margin: 0px;
+        padding-top: 20px;
+        position: absolute;
+        z-index: 2;
+    }
+    .home {
+        height: 100%;
+    }
+    .projects,
+    .create-task {
+        height: 100vh;
+        width: 100%;
+        border-radius: 0px;
+        margin: 0px 20px;
+        padding-top: 20px;
+        overflow-y: scroll;
+    }
+    .intro {
+        height: auto;
+    }
+    .intro h2 {
+        margin-top: 10px;
+    }
+    .intro-img img {
+        position: relative;
+        text-align: center;
+        top: 0;
+        right: 0;
+        margin: 20px 0px;
+    }
+    .intro-img {
+        text-align: center;
+    }
+    .search {
+        display: none;
+    }
+    .cancel {
+        color: black;
+        display: block;
+        position: relative;
+        width: 100%;
+        margin-bottom: 40px;
+        z-index: 0;
+    }
+    .create-task form {
+        margin: 20px 10px;
+    }
+    #add-task {
+        margin: 20px 22px;
+    }
+    .ongoing::-webkit-scrollbar {
+        display: none;
+    }
+    .elapsed,
+    .ongoing,
+    .completed {
+        height: auto;
+        /* overflow-y: scroll; */
+        position: relative;
+    }
+}
+
+
+/* start of phone styles */
+
+@media screen and (max-width: 479px) {
+    .side-nav {
+        width: 150px;
+    }
+    .all-tasks {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .btn-div {
+        padding: 20px 0px;
+    }
+}
+
+@media screen and (max-width: 267px) {
+    .navbar-brand {
+        display: none;
+    }
+}
