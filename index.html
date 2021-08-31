@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-Manager </title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="all.min.css"> -->
+
+    <script src="https://kit.fontawesome.com/b08076096a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="loader d-flex align-items-center justify-content-center">
+        <div class="spinner-border" role="status" aria-hidden="true"></div>
+    </div>
+    <div class="app none">
+        <div class="side-nav text-center">
+            <i class="fas fa-times cancel"></i>
+            <i class="fas fa-rocket fa-2x blue"></i>
+            <div class="side-nav-links d-flex flex-column">
+                <button id="home" class="d-flex justify-content-center align-items-center nav-btn">
+                        <i class="fas fa-home"></i>
+                        Home
+                    </button>
+                <button id="projects" class="d-flex justify-content-center align-items-center active-link nav-btn">
+                        <i class="fas fa-tasks"></i>
+                        Projects
+                    </button>
+                <button id="create-task" class="d-flex justify-content-center align-items-center  nav-btn">
+                        <i class="fas fa-plus"></i>
+                       Create-Task
+                    </button>
+            </div>
+        </div>
+        <div class="home none">
+            <div class="home-container">
+                <div class="home-nav">
+                    <i class="fas fa-align-justify toggler"></i>
+                    <a href="" class="navbar-brand ms-3">Task-Manager</a>
+                </div>
+                <div class="row align-items-center intro">
+                    <div class="col-md-5 intro-text text-center">
+                        <h2>
+                            The #1 task management app used by all class of people
+                        </h2>
+                        <button class="btn btn-outline-secondary mt-2 btn-add">Start</button>
+                    </div>
+                    <div class="col-md-7 intro-img text-center">
+                        <img src="IMG-20210830-WA0005.jpg" alt="">
+                    </div>
+                </div>
+                <div class="features text-center">
+                    <h2 class=" text-center my-3">Features</h2>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <i class="far fa-thumbs-up fa-3x py-3"></i>
+                            <p>Easy to navigate app with cool and modern technology just right for you.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <i class="fas fa-tasks fa-3x py-3"></i>
+                            <p>Get an overview on all your tasks with categories for ongoing, elapsed and completed tasks.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <i class="far fa-calendar-plus fa-3x py-3"></i>
+                            <p>Create, delete and manage all your tasks </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="projects">
+            <div class="search ps-4">
+                <input id="search" type="text" placeholder="search"> <i class="search-icon fas fa-search"></i></input>
+            </div>
+            <div class="btn-div d-flex justify-content-between">
+                <div>
+                    <i class="fas fa-align-justify toggler"></i>
+                    <a href="" class="navbar-brand ms-3">Task-Manager</a>
+                </div>
+
+                <i class="fas fa-plus add-btn"></i>
+            </div>
+            <div class="row all-tasks">
+                <div class="col-md-4 ongoing">
+                    <h6 class="text-center mb-lg-3">Ongoing</h6>
+                </div>
+                <div class="col-md-4 completed">
+                    <h6 class="text-center mb-lg-3">Completed</h6>
+                </div>
+
+                <div class=" elapsed col-md-4">
+                    <h6 class="text-center mb-lg-3">Elapsed</h6>
+                </div>
+
+            </div>
+            <div class="none no-task mt-3 justify-content-center">
+                <div class="">
+                    <h5 class="pt-3">You do not have any task yet, click the add button to create a task and manage it.</h6>
+                </div>
+            </div>
+            <div class="searched-task none col-lg-4">
+
+                <div class="searched">
+
+                </div>
+                <div class="btn btn-outline-secondary back my-2">Back</div>
+
+            </div>
+        </div>
+        <div class="create-task none">
+            <i class="fas fa-align-justify toggler"></i>
+            <h3 class="text-center mt-lg-3">Create-Task</h3>
+            <p class="orange text-center mb-lg-3">add a new task...</p>
+
+            <form class="row">
+                <div class="col-md-8">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" id="title" class="form-control" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="date" class="form-label">Elapse Date</label>
+                    <input type="date" id="date" class="form-control">
+                </div>
+                <div class="col-12 mt-3">
+                    <label for="task" class="form-label">Task</label>
+                    <textarea class="form-control" id="task" rows="3" required></textarea>
+                </div>
+            </form>
+            <div class="mt-3">
+                <button class="btn btn-outline-secondary" id="add-task">Add Task</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
